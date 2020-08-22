@@ -3,6 +3,8 @@
 
 # But not these files...
 !.gitignore
+!requirements.txt
+
 !bot.py
 
 # ...even if they are in subdirectories
@@ -12,7 +14,7 @@
 #!*/a/b/file1.txt
 #*/a/b/c/*
 !bin/*
-!converted/
+!converted/*
 !opencv/*
 !voice/*
 !voices.db
