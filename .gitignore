@@ -13,8 +13,8 @@
 # if the files to be tracked are in subdirectories
 #!*/a/b/file1.txt
 #*/a/b/c/*
-!bin/*
-!converted/*
+# !bin/*
+# !converted/*
 !opencv/*
-!voice/*
-!voices.db
+# !voice/*
+# !voices.db
