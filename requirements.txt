@@ -1,3 +1,2 @@
 opencv-python
-sqlite3
 telebot
