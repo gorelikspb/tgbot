@@ -1,4 +1,3 @@
 opencv-python
-subprocess
 sqlite3
 telebot
