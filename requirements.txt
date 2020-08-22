@@ -1,5 +1,4 @@
-cv2
-os
+opencv-python
 subprocess
 sqlite3
 telebot
