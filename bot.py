@@ -59,8 +59,22 @@ def photo(message):
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
+    start_message = \
+    """ 
+    Привет! Что я умею?
+
+    Для разминки: отвечаю на "привет" и "пока".
+    
+    1) Сохраняю аудиосообщения из диалогов в БД, вместе с твоим ID. Отправь войс, всё поймешь.
+    2) Выдаю список пользователей имеющихся в базе данных. Команда - get users.
+    3) Конвертирую сохраненные войсы из телеграм-формата (ogg) в wav и кидаю их сюда по запросу на конкретного пользователя. Команда - get wav [user_id]. Например, get wav 127226331
+    4) Распознаю лица на фотографии. Пришли фото, а я постараюсь вернуть его же с квадратами на лицах.
+    
+    Я тестовый бот, не относись ко мне слишком строгои не распространяй чужие данные.
+    """
+
     bot.send_message(message.chat.id, message.from_user.id)
-    bot.send_message(message.chat.id, 'Привет, ты vfvbcfk мне /start')
+    bot.send_message(message.chat.id, start_message)
 
 
 @bot.message_handler(commands=['users'])
@@ -128,7 +142,7 @@ def send_text(message):
             bot.send_document(message.chat.id, open(wav, 'rb'))
 
 
-    elif message.text == 'Пока':
+    elif message.text == 'пока':
         bot.send_message(message.chat.id, 'Прощай, создатель')
 
     elif message.text.startswith('uid '):
